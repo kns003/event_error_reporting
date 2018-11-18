@@ -42,4 +42,4 @@ class TestApp(TimeStampedModel):
     address = models.TextField(null=True, blank=True)
 
     def __str__(self):
-        return shashank
+        return self.name + str(self.id)
