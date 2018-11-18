@@ -1,0 +1,36 @@
+{% extends "admin/change_form.html" %}
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+
+{% block after_field_sets %}
+<b>IP address info</b>
+<table>
+{% for k,v in original.ip_address_info.items %}
+    <tr>
+        <td>{{k}}</td>
+        <td>{{v}}</td>
+    </tr>
+{% endfor %}
+</table>
+<br>
+
+
+<b> Request Headers</b>
+<br>
+{{original.request_headers}}
+{% endblock %}

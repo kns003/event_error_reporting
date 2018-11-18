@@ -1,0 +1,37 @@
+{% extends "admin/change_form.html" %}
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+
+{% block after_field_sets %}
+<b>Changed Fields</b>
+<table>
+    <tr>
+        <th>Field Name</th>
+        <th>Initial Value</th>
+        <th>Final Value</th>
+    </tr>
+{% for obj in original.changed_data %}
+    <tr>
+        <td>{{obj.field_name}}</td>
+        <td>{{obj.initial_value}}</td>
+        <td>{{obj.final_value}}</td>
+    </tr>
+{% endfor %}
+</table>
+<br>
+{% endblock %}
