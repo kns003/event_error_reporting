@@ -18,3 +18,5 @@ django admin event and alert reporting.
 4. Error Reporting.
 
     - Any exception which occurs in the Dajngo Admin are tracked in `ErrorReporting Admin`
+    
+    Demo Video - `https://www.youtube.com/watch?v=TxplhoEDS9E`
